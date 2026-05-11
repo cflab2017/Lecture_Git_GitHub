@@ -1,0 +1,35 @@
+name: CI Report
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate report
+        run: |
+          {
+            echo "=== Build Report ==="
+            echo "Date: $(date)"
+            echo ""
+            echo "=== System Info ==="
+            uname -a
+            echo ""
+            echo "=== Recent Commits ==="
+            git log --oneline -5
+          } > report.txt
+          cat report.txt
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-report
+          path: report.txt
+          retention-days: 3
