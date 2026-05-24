@@ -1,5 +1,9 @@
 # Git·GitHub 심화 강의
 
+> 🌐 **전체 10편 강의 보기** — [https://coding-now.com/blog/git](https://coding-now.com/blog/git)
+>
+> 한국어 무료 Git·GitHub 강의 10편 · Coding Now
+
 Git과 GitHub를 처음 접하는 입문자부터 실무에 적용하려는 개발자까지를 대상으로 한 8단원 한국어 실습 강의입니다.
 명령줄 도구 `git`과 `bash`만으로 모든 예제를 실행할 수 있어 별도의 개발 환경 설정이 필요 없습니다.
 
